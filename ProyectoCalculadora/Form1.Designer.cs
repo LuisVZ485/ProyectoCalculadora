@@ -29,13 +29,35 @@ namespace ProyectoCalculadora
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.cajaResultado = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
+            // 
+            // cajaResultado
+            // 
+            this.cajaResultado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cajaResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cajaResultado.Location = new System.Drawing.Point(64, 64);
+            this.cajaResultado.Name = "cajaResultado";
+            this.cajaResultado.Size = new System.Drawing.Size(269, 31);
+            this.cajaResultado.TabIndex = 0;
+            this.cajaResultado.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(420, 389);
+            this.Controls.Add(this.cajaResultado);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox cajaResultado;
     }
 }
 
