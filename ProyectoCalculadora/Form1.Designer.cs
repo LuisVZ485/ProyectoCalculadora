@@ -30,7 +30,7 @@ namespace ProyectoCalculadora
         private void InitializeComponent()
         {
             this.cajaResultado = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblHistorial = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cajaResultado
@@ -43,22 +43,22 @@ namespace ProyectoCalculadora
             this.cajaResultado.TabIndex = 0;
             this.cajaResultado.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // label1
+            // lblHistorial
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(64, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblHistorial.AutoSize = true;
+            this.lblHistorial.Location = new System.Drawing.Point(64, 45);
+            this.lblHistorial.Name = "lblHistorial";
+            this.lblHistorial.Size = new System.Drawing.Size(35, 13);
+            this.lblHistorial.TabIndex = 1;
+            this.lblHistorial.Text = "label1";
+            this.lblHistorial.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(420, 389);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblHistorial);
             this.Controls.Add(this.cajaResultado);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -70,7 +70,7 @@ namespace ProyectoCalculadora
         #endregion
 
         private System.Windows.Forms.TextBox cajaResultado;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblHistorial;
     }
 }
 
