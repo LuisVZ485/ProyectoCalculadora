@@ -16,6 +16,18 @@ namespace ProyectoCalculadora
             InitializeComponent();
         }
 
+        private void LeerNumero(string numero)
+        {
+            if (cajaResultado.Text == "0" && cajaResultado.Text != null)
+            {
+                cajaResultado.Text = numero;
+            }
+            else
+            {
+                cajaResultado.Text += numero;
+            }
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -29,6 +41,67 @@ namespace ProyectoCalculadora
         private void button15_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCero_Click(object sender, EventArgs e)
+        {
+            if (cajaResultado.Text == "0")
+            {
+                return;
+            }
+            else if (cajaResultado.Text != "0")
+            {
+                cajaResultado.Text += "0";
+            }
+            else
+            {
+                cajaResultado.Text = "0";
+            }
+        }
+
+        private void btnUno_Click(object sender, EventArgs e)
+        {
+            LeerNumero("1");
+        }
+
+        private void btnDos_Click(object sender, EventArgs e)
+        {
+            LeerNumero("2");
+        }
+
+        private void btnTres_Click(object sender, EventArgs e)
+        {
+            LeerNumero("3");
+        }
+
+        private void btnCuatro_Click(object sender, EventArgs e)
+        {
+            LeerNumero("4");
+        }
+
+        private void btnCinco_Click(object sender, EventArgs e)
+        {
+            LeerNumero("5");
+        }
+
+        private void btnSeis_Click(object sender, EventArgs e)
+        {
+            LeerNumero("6");
+        }
+
+        private void btnSiete_Click(object sender, EventArgs e)
+        {
+            LeerNumero("7");
+        }
+
+        private void btnOcho_Click(object sender, EventArgs e)
+        {
+            LeerNumero("8");
+        }
+
+        private void btnNueve_Click(object sender, EventArgs e)
+        {
+            LeerNumero("9");
         }
     }
 }
