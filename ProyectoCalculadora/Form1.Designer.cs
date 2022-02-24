@@ -45,7 +45,7 @@ namespace ProyectoCalculadora
             this.btnMultiplicacion = new System.Windows.Forms.Button();
             this.btnResta = new System.Windows.Forms.Button();
             this.btnMas = new System.Windows.Forms.Button();
-            this.btnIgual = new System.Windows.Forms.Button();
+            this.btnResultado = new System.Windows.Forms.Button();
             this.btnModulo = new System.Windows.Forms.Button();
             this.btnDivision = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
@@ -223,18 +223,19 @@ namespace ProyectoCalculadora
             this.btnMas.TabIndex = 15;
             this.btnMas.Text = "+";
             this.btnMas.UseVisualStyleBackColor = true;
+            this.btnMas.Click += new System.EventHandler(this.btnMas_Click);
             // 
-            // btnIgual
+            // btnResultado
             // 
-            this.btnIgual.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIgual.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIgual.Location = new System.Drawing.Point(262, 290);
-            this.btnIgual.Name = "btnIgual";
-            this.btnIgual.Size = new System.Drawing.Size(60, 32);
-            this.btnIgual.TabIndex = 16;
-            this.btnIgual.Text = "=";
-            this.btnIgual.UseVisualStyleBackColor = true;
-            this.btnIgual.Click += new System.EventHandler(this.button15_Click);
+            this.btnResultado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnResultado.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResultado.Location = new System.Drawing.Point(262, 290);
+            this.btnResultado.Name = "btnResultado";
+            this.btnResultado.Size = new System.Drawing.Size(60, 32);
+            this.btnResultado.TabIndex = 16;
+            this.btnResultado.Text = "=";
+            this.btnResultado.UseVisualStyleBackColor = true;
+            this.btnResultado.Click += new System.EventHandler(this.btnResultado_Click);
             // 
             // btnModulo
             // 
@@ -285,7 +286,7 @@ namespace ProyectoCalculadora
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnDivision);
             this.Controls.Add(this.btnModulo);
-            this.Controls.Add(this.btnIgual);
+            this.Controls.Add(this.btnResultado);
             this.Controls.Add(this.btnMas);
             this.Controls.Add(this.btnResta);
             this.Controls.Add(this.btnMultiplicacion);
@@ -327,7 +328,7 @@ namespace ProyectoCalculadora
         private System.Windows.Forms.Button btnMultiplicacion;
         private System.Windows.Forms.Button btnResta;
         private System.Windows.Forms.Button btnMas;
-        private System.Windows.Forms.Button btnIgual;
+        private System.Windows.Forms.Button btnResultado;
         private System.Windows.Forms.Button btnModulo;
         private System.Windows.Forms.Button btnDivision;
         private System.Windows.Forms.Button btnReset;

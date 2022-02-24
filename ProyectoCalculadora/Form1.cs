@@ -11,6 +11,9 @@ namespace ProyectoCalculadora
 {
     public partial class Form1 : Form
     {
+        private double valor1 = 0;
+        private double valor2 = 0;
+
         public Form1()
         {
             InitializeComponent();
@@ -38,9 +41,17 @@ namespace ProyectoCalculadora
 
         }
 
-        private void button15_Click(object sender, EventArgs e)
+        private void btnResultado_Click(object sender, EventArgs e)
         {
-
+            if (valor2 == 0)
+            {
+                valor2 = Convert.ToDouble(cajaResultado.Text);
+                lblHistorial.Text += valor2 + " = ";
+                double resultado = valor1 + valor2;
+                valor1 = 0;
+                valor2 = 0;
+                cajaResultado.Text = Convert.ToString(resultado);
+            }
         }
 
         private void btnCero_Click(object sender, EventArgs e)
@@ -102,6 +113,14 @@ namespace ProyectoCalculadora
         private void btnNueve_Click(object sender, EventArgs e)
         {
             LeerNumero("9");
+        }
+
+        private void btnMas_Click(object sender, EventArgs e)
+        {
+            valor1 = Convert.ToDouble(cajaResultado.Text);
+            lblHistorial.Text = cajaResultado.Text + " + ";
+            cajaResultado.Text = "0";
+
         }
     }
 }
